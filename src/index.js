@@ -124,7 +124,7 @@ const memoize = (name, resultingGraphQLType) => {
  */
 const getFromMemory = name => generatedTypesMemory[name];
 
-function createType(args) {
+function createType(args, nestedSchemaArgs = {}) {
   const parsedArgs = parseArgs(args);
 
   // Check if this type is already memoized
@@ -244,7 +244,8 @@ but was specified as population reference.
                 class: parsedArgs.class,
                 schema: path.schema,
                 exclude: parsedArgs.exclude,
-              }),
+                ...((nestedSchemaArgs && nestedSchemaArgs[pathName]) || {}),
+              }, nestedSchemaArgs),
             },
           );
         }
@@ -278,7 +279,8 @@ but was specified as population reference.
                   class: parsedArgs.class,
                   schema: path.schema,
                   exclude: parsedArgs.exclude,
-                })),
+                  ...((nestedSchemaArgs && nestedSchemaArgs[pathName]) || {}),
+                }, nestedSchemaArgs)),
               },
             );
           }

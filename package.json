@@ -1,6 +1,6 @@
 {
   "name": "mongoose-schema-to-graphql",
-  "version": "2.7.0",
+  "version": "2.8.0",
   "description": "Auto types generator for graphQL schema, based on your existed Mongoose schema. Check GitHub for description.",
   "main": "lib/index.min.js",
   "scripts": {
@@ -44,12 +44,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sarkistlt/mongoose-schema-to-graphql.git"
+    "url": "https://github.com/iakovmarkov/mongoose-schema-to-graphql.git"
   },
   "bugs": {
-    "url": "https://github.com/sarkistlt/mongoose-schema-to-graphql/issues"
+    "url": "https://github.com/iakovmarkov/mongoose-schema-to-graphql/issues"
   },
-  "homepage": "https://github.com/sarkistlt/mongoose-schema-to-graphql#readme",
+  "homepage": "https://github.com/iakovmarkov/mongoose-schema-to-graphql#readme",
   "license": "MIT",
   "peerDependencies": {
     "graphql": ">=0.7.1",
