@@ -25,5 +25,9 @@ declare module 'mongoose-schema-to-graphql' {
         fields?: ObjectKeyStringValueAnyType,
     };
 
-    export default function createType(config: ConfigurationObject): any;
+    type NestedConfigurationObject = {
+        [k: string]: ConfigurationObject
+    };
+
+    export default function createType(config: ConfigurationObject, nestedConfig?: NestedConfigurationObject): any;
 }
